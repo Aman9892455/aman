@@ -1,0 +1,69 @@
+from tkinter import*
+from tkinter import ttk
+
+def name():
+    x=var.get()
+    lbl2.config(text=x)
+    
+
+win=Tk()
+win.geometry('1000x1000')
+win.maxsize(width=900,height=700)
+win.minsize(width=900,height=700)
+win.title('aman')
+
+#win.iconbitmap('icon.ico')
+
+lbl1=Label(win,text="name ",bg="red",fg="white",width=4,height=1,bd=5)
+lbl1.place(x=10,y=40)
+var=StringVar()
+
+lbl2=Label(win,text="nothing ",bg="red",fg="white",width=4,height=1,bd=5)
+lbl2.place(x=300,y=40)
+
+ent=Entry(win,bg='red',fg='white',bd=5,width=10,textvariable=var)
+ent.place(x=70,y=40)
+
+btn=Button(win,text="submit",command=name)
+btn.place(x=170,y=40)
+
+
+com=ttk.Combobox(win,width=27)
+com['values']=('aman','amit','shiv')
+com['state']='readonly'
+com.place(x=350,y=40)
+
+
+def checkbutton():
+    print(checkbtn1.get())
+    print(checkbtn2.get())
+checkbtn1=IntVar()
+checkbtn2=IntVar()
+
+
+select=Checkbutton(win,text="male",variable=checkbtn1,onvalue=1,offvalue=0)
+select.place(x=600,y=40)
+
+select=Checkbutton(win,text="female",variable=checkbtn2,onvalue=1,offvalue=0)
+select.place(x=690,y=40)
+
+
+btn=Button(win,text="select gender",command=checkbutton).place(x=800,y=40)
+
+def rad():
+    y=va.get()
+    print(y)
+    lbl.config(text=y)
+    
+va=StringVar
+
+radio=Radiobutton(win,text="male",value=1,textvariable=va)
+radio.place(x=50,y=100)
+lbl=Label(win,text="nothing")
+lbl.place(x=300,y=100)
+radio=Radiobutton(win,text="female",value=0,textvariable=va)
+radio.place(x=150,y=100)
+
+btn=Button(win,text="radio")
+btn.place(x=200,y=100)
+win.mainloop()
