@@ -1,0 +1,11 @@
+try:
+     f=open("C:\\Users\\AMAN  VISHWAKARMA\\Downloads\\amit.txt","r")
+    
+     print(f.readlines())
+except:
+     print("please create a file ")
+
+else:       
+ f.close() 
+ print("file closed ")    aman 
+aman & "C:/Program Files/Python311/python.exe" "c:/Users/AMAN  VISHWAKARMA/Downloads/file"
